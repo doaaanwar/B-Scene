@@ -1,0 +1,15 @@
+td {
+    padding-left: 10px;
+}
+
+label {
+ 
+    padding-left: 5px;
+}
+
+#submitCategories { margin-top: 50px;}
+
+.categoriesTable {
+  margin: 0 auto !important;
+  float: none !important;
+}
