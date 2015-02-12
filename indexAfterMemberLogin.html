@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>B-Scene Website</title>
+	<!-- Bootstrap Core CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<!-- Custom CSS -->
+	<link href="css/bscene.css" rel="stylesheet">
+	<link href="css/bic_calendar.css" rel="stylesheet">
+	<link href="css/heroic-features.css" rel="stylesheet">
+	
+	
+	 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"> B-Scene</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#">Services</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+                 <form class="navbar-form navbar-left" role="search">
+						<div class="form-group">
+							<input class="form-control" type="text" />
+						</div> <button type="submit" class="btn btn-default">Search</button>
+			     </form>
+			     <ul class="nav navbar-nav navbar-right">
+						
+						<li>
+							<a class="login-window" href="#login-box">Login</a>
+						</li>
+						<li>
+							<a href="createAccount.html">Sign up</a>
+						</li>
+				</ul>
+            </div>
+            <!-- /.navbar-collapse -->
+           
+        </div>
+        <!-- /.container -->
+    </nav>
+
+
+
+    <div id="login-box" class="login-popup">
+    	 <script>
+    	 	$(document).ready(function() {
+				$('a.login-window').click(function() {
+				    
+				    //Getting the variable's value from a link 
+				    var loginBox = $(this).attr('href');
+				
+				    //Fade in the Popup
+				    $(loginBox).fadeIn(300);
+				    
+				    //Set the center alignment padding + border see css style
+				    var popMargTop = ($(loginBox).height() + 24) / 2; 
+				    var popMargLeft = ($(loginBox).width() + 24) / 2; 
+				    
+				    $(loginBox).css({ 
+				        'margin-top' : -popMargTop,
+				        'margin-left' : -popMargLeft
+				    });
+				    
+				    // Add the mask to body
+				    $('body').append('<div id="mask"></div>');
+				    $('#mask').fadeIn(300);
+				    
+				    return false;
+				});
+				
+				// When clicking on the button close or the mask layer the popup closed
+				$('a.close, #mask').on('click', function() { 
+				  $('#mask , .login-popup').fadeOut(300 , function() {
+				    $('#mask').remove();  
+				}); 
+				return false;
+				});
+				});
+    	 </script>
+		  <a href="#" class="close"><img src="images/close_pop.png" class="btn_close" title="Close Window" alt="Close" /></a>
+		  <form method="post" class="signin" action="#">
+		        <fieldset class="textbox">
+		        <label class="username">
+		        <span>Username or email</span>
+		        <input id="username" name="username" value="" type="text" autocomplete="on" placeholder="Username">
+		        </label>
+		        <label class="password">
+		        <span>Password</span>
+		        <input id="password" name="password" value="" type="password" placeholder="Password">
+		        </label>
+		        <button class="submit button" type="button">Sign in</button>
+		        <p>
+		        <a class="forgot" href="forgetPassword.html">Forgot your password?</a>
+		        </p>        
+		        </fieldset>
+		  </form>
+</div>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Jumbotron Header -->
+        <header class="jumbotron hero-spacer">
+            <h1>Welcome to B-Scene!</h1>
+            <p>B-Scene is a hub for industry professionals events and workshops. You can create an account to publish your own or your organization events. You can search for events, add them to your calender and share them on your social websites.</p>
+            <p><a class="btn btn-primary btn-large">Check Services Provided!</a>
+            </p>
+        </header>
+
+        <hr>
+
+        <!-- Title -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h3></h3>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Page Features -->
+        <div class="row clearfix">
+				<div class="col-md-10 column">
+					<div class="row text-center">
+			           
+			            <div class="col-md-3 col-sm-6 hero-feature">
+			                <div class="thumbnail">
+			                    <img src="http://placehold.it/800x500" alt="">
+			                    <div class="caption">
+			                        <h3>Supply Chain Events</h3>
+			                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			                        <p>
+			                            <a href="#" class="btn btn-primary">See Events</a> 
+			                        </p>
+			                    </div>
+			                </div>
+			            </div>
+			
+			            <div class="col-md-3 col-sm-6 hero-feature">
+			                <div class="thumbnail">
+			                    <img src="http://placehold.it/800x500" alt="">
+			                    <div class="caption">
+			                        <h3>Food Industry Events</h3>
+			                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			                        <p>
+			                            <a href="#" class="btn btn-primary">See Events</a> 
+			                        </p>
+			                    </div>
+			                </div>
+			            </div>
+			
+			            <div class="col-md-3 col-sm-6 hero-feature">
+			                <div class="thumbnail">
+			                    <img src="http://placehold.it/800x500" alt="">
+			                    <div class="caption">
+			                        <h3>Supply Chain Events</h3>
+			                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			                        <p>
+			                            <a href="#" class="btn btn-primary">See Events</a> 
+			                        </p>
+			                    </div>
+			                </div>
+			            </div>
+			
+			            <div class="col-md-3 col-sm-6 hero-feature">
+			                <div class="thumbnail">
+			                    <img src="http://placehold.it/800x500" alt="">
+			                    <div class="caption">
+			                        <h3>Project Management</h3>
+			                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			                        <p>
+			                            <a href="#" class="btn btn-primary">See Events</a> 
+			                        </p>
+			                    </div>
+			                </div>
+			            </div>
+			            
+			
+			        </div>
+			        <!-- /.row -->
+			          <hr>
+			          <br/>
+			          
+			         <div class="row text-center">
+			         
+			           <div class="col-md-3 col-sm-6 hero-feature">
+			                <div class="thumbnail">
+			                    <img src="http://placehold.it/800x500" alt="">
+			                    <div class="caption">
+			                        <h3>Human Resources</h3>
+			                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			                        <p>
+			                            <a href="#" class="btn btn-primary">See Events</a> 
+			                        </p>
+			                    </div>
+			                </div>
+			            </div>
+			
+			            <div class="col-md-3 col-sm-6 hero-feature">
+			                <div class="thumbnail">
+			                    <img src="http://placehold.it/800x500" alt="">
+			                    <div class="caption">
+			                        <h3>Education/ Training Events</h3>
+			                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			                        <p>
+			                            <a href="#" class="btn btn-primary">See Events</a> 
+			                        </p>
+			                    </div>
+			                </div>
+			            </div>
+			             <div class="col-md-3 col-sm-6 hero-feature">
+			                <div class="thumbnail">
+			                    <img src="http://placehold.it/800x500" alt="">
+			                    <div class="caption">
+			                        <h3>Managment Consulting</h3>
+			                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			                        <p>
+			                            <a href="#" class="btn btn-primary">See Events</a> 
+			                        </p>
+			                    </div>
+			                </div>
+			            </div>
+			
+			            <div class="col-md-3 col-sm-6 hero-feature">
+			                <div class="thumbnail">
+			                    <img src="http://placehold.it/800x500" alt="">
+			                    <div class="caption">
+			                        <h3>Tours</h3>
+			                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			                        <p>
+			                            <a href="#" class="btn btn-primary">See Events</a> 
+			                        </p>
+			                    </div>
+			                </div>
+			            </div>
+			             <div class="col-md-3 col-sm-6 hero-feature">
+			             </div>
+			         </div>
+			         
+				</div>
+				<div class="col-md-2 column">
+	
+			              <div class="row" >
+			                <div class="col-sm-4" >
+			                   
+			                    <script>
+			                        $(document).ready(function() {
+			
+			                            var monthNames = ["January", "February", "March", "April", "Mai", "June", "July", "August", "Septembre", "Octobre", "Novembre", "Decembre"];
+			
+			                            var dayNames = ["M", "T", "W", "T", "F", "S", "S"];
+			
+			                            var events = [
+			                                {
+			                                    date: "28/12/2013",
+			                                    title: 'SPORT & WELLNESS',
+			                                    link: 'http://bic.cat',
+			                                    linkTarget: '_blank',
+			                                    color: '',
+			                                    content: '<img src="http://gettingcontacts.com/upload/jornadas/sport-wellness_portada.png" ><br>06-11-2013 - 09:00 <br> Tecnocampus Mataró Auditori',
+			                                    class: '',
+			                                    displayMonthController: true,
+			                                    displayYearController: true,
+			                                    nMonths: 6
+			                                }
+			                            ];
+			
+			                            $('#calendari_lateral1').bic_calendar({
+			                                //list of events in array
+			                                events: events,
+			                                //enable select
+			                                enableSelect: true,
+			                                //enable multi-select
+			                                multiSelect: true,
+			                                //set day names
+			                                dayNames: dayNames,
+			                                //set month names
+			                                monthNames: monthNames,
+			                                //show dayNames
+			                                showDays: true,
+			                                //show month controller
+			                                displayMonthController: true,
+			                                //show year controller
+			                                displayYearController: true,                                
+			                                //set ajax call
+			                                reqAjax: {
+			                                    type: 'get',
+			                                    url: 'http://bic.cat/bic_calendar/index.php'
+			                                }
+			                            });
+			                        });
+			                    </script>
+			                    <div id="calendari_lateral1">
+			                    	
+			                    </div>
+			                </div>
+			            
+							</div>
+			</div>
+		</div>
+       
+      
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Your Website 2014</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+    
+   
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    
+    <script src="js/bic_calendar.js"></script>
+
+</body>
+
+</html>
