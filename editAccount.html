@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Create Account</title>
+    <title>Edit Account Details</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -59,18 +59,18 @@
     <div class="container">
 
         <div class="starter-template">
-            <h1>Create Account</h1>
+            <h1>Edit Account Details</h1>
             <p class="lead">All fields marked with * are required</p>
 
-            <div class="col-md-6" id="createAccountColumn">
-                <form class="form-group" id="createAccount" name="createAccount">
+            <div class="col-md-6" id="editAccountColumn">
+                <form class="form-group" id="editAccount" name="editAccount">
                     <table>
                         <tr>
                             <td class="text-right">
                                 <label for="fName">* First Name</label>
                             </td>
                             <td class="text-left">
-                                <input type="text" id="fName" required>
+                                <input type="text" id="fName" value="Ada" required>
                             </td>
                         </tr>
                         <tr>
@@ -78,7 +78,7 @@
                                 <label for="lName">* Last Name</label>
                             </td>
                             <td class="text-left">
-                                <input type="text" id="lName" required>
+                                <input type="text" id="lName" value="Lovelace" required>
                             </td>
                         </tr>
                         <tr>
@@ -86,7 +86,7 @@
                                 <label for="email">* E-Mail Address</label>
                             </td>
                             <td class="text-left">
-                                <input type="email" id="email" required>
+                                <input type="email" id="email" value="alovelace@analyticalengine.com" required>
                             </td>
                         </tr>
                         <tr>
@@ -94,7 +94,7 @@
                                 <label for="phone">* Business Phone #</label>
                             </td>
                             <td class="text-left">
-                                <input type="tel" id="phone" required>
+                                <input type="tel" id="phone" value="(519) 555-1234" required>
                             </td>
                         </tr>
                         <tr>
@@ -108,9 +108,9 @@
                             <td class="text-left">
                                 <select id="organization" required>
                                     <option value="">Select an Organization</option>
-                                    <option value="">Organization 1</option>
-                                    <option value="">Organization 2</option>
-                                    <option value="">Organization 3</option>
+                                    <option value="1">Analytical Engine Inc.</option>
+                                    <option value="2">Organization 2</option>
+                                    <option value="3">Organization 3</option>
                                 </select>
 
                             </td>
@@ -120,7 +120,7 @@
                                 <label for="persUrl">URL</label>
                             </td>
                             <td class="text-left">
-                                <input type="url" id="persUrl">
+                                <input type="url" id="persUrl" value="www.analyticalengine.com">
                             </td>
                         </tr>
                         <tr>
@@ -136,7 +136,7 @@
                                 <label for="address">Street Address</label>
                             </td>
                             <td class="text-left">
-                                <input type="text" id="address">
+                                <input type="text" id="address" value="123 Babbage Rd.">
                             </td>
                         </tr>
                         <tr>
@@ -144,7 +144,7 @@
                                 <label for="city">City</label>
                             </td>
                             <td class="text-left">
-                                <input type="text" id="city">
+                                <input type="text" id="city" value="Stratford">
                             </td>
                         </tr>
                         <tr>
@@ -215,7 +215,7 @@
                             </tr>
                             <tr>
                                 <td class="text-center" colspan="2">
-                                    <input type="submit" class="btn btn-warning">
+                                    <input type="submit" id="submitOrganization" class="btn btn-warning">
                                 </td>
                             </tr>
                         </table>
@@ -237,7 +237,6 @@
                 </div>
                 <div class="modal-body">
                     <table>
-                        <table>
                         <tr>
                             <td class="text-right">
                                 <label for="fName">First Name</label>
@@ -339,7 +338,7 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>
     <script src="js/confirmDetails.js"></script>
-    <script type="text/javascript">registerSubmitHandler("createAccount");</script>    
+    <script type="text/javascript">registerSubmitHandler("editAccount");</script>    
 
 </body>
 
