@@ -70,7 +70,7 @@
                                 <label for="Etitle">* Event Title</label>
                             </td>
                             <td class="text-left">
-                                <input type="text" id="eTitle" required>
+                                <input type="text" id="eTitle" value="Conestoga College Family day"  required>
                             </td>
                         </tr>
                         <tr>
@@ -78,7 +78,7 @@
                                 <label for="Sdate">* Start Date</label>
                             </td>
                             <td class="text-left">
-                                <input type="date" name="Sdate">
+                                <input type="date" value="07/15/2015" name="Sdate">
                             </td>
                         </tr>
 						
@@ -87,7 +87,7 @@
                                 <label for="sTime">* Start Time</label>
                             </td>
                             <td class="text-left">
-                                <input type="time" name="Stime">
+                                <input type="time" value="4:28 pm" name="Stime">
                             </td>
                         </tr>
 						
@@ -104,7 +104,7 @@
                                 <label for="address">Street Address</label>
                             </td>
                             <td class="text-left">
-                                <input type="text" id="address">
+                                <input type="text" value="conestoga college doon campus" id="address">
                             </td>
                         </tr>
                         <tr>
@@ -113,7 +113,7 @@
                             </td>
                             <td class="text-left">
                                 <select>
-								  <option value="Kitchener">Kitchener</option>
+								  <option value="Kitchener" selected="true">Kitchener</option>
 								  <option value="Waterloo">Waterloo</option>
 								  <option value="Cambridge">Cambridge </option>
 								  <option value="Guelph">Guelph</option>
@@ -136,7 +136,7 @@
                                     <option value="ns">NS</option>
                                     <option value="nt">NT</option>
                                     <option value="nu">NU</option>
-                                    <option value="on">ON</option>
+                                    <option value="on" selected="true">ON</option>
                                     <option value="pe">PE</option>
                                     <option value="qc">QC</option>
                                     <option value="sk">SK</option>
@@ -149,7 +149,7 @@
                                 <label for="PCode">Postal Code</label>
                             </td>
                             <td class="text-left">
-                                <input type="text" id="PCode">
+                                <input type="text" value="M2M 6H3" id="PCode">
                             </td>
                         </tr>
 						<tr>
@@ -157,18 +157,20 @@
                                 <label for="ETime">* Description</label>
                             </td>
                             <td class="text-left">
-								<textarea name="comments" cols="25" rows="5">Enter Event's Description here...</textarea>
+								<textarea name="comments" cols="25" rows="5">An event that gives the opportunity of the community to engage with their kids, families and friends to socialize, have a fun day enjoy the weather in Conestoga College Campus.</textarea>
                             </td>
                         </tr>
 		
                         <tr>
                             <td class="text-center" colspan="2">
                                 <!-- Button trigger modal -->
-                                <button type="submit" class="btn btn-warning" data-toggle="modal" data-target="#confirmDetails">
-                                    Submit
+                                <button type="button" class="btn btn-warning"onclick="location.href='eventDetailsWithEdit.html'" >
+                                   Save 
                                 </button>
 
-
+								 <button type="button" class="btn btn-warning" onclick="location.href='eventDetailsWithEdit.html'">
+                                   Cancel 
+                                </button>
                             </td>
                         </tr>
                     </table>
