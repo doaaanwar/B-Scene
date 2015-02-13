@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Create Account</title>
+    <title>Create An Event</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -62,9 +62,9 @@
             <h1>Post an Event</h1>
             <p class="lead">All fields marked with * are required</p>
 
-            <div class="col-md-6" id="createEventColumn">
-                <form class="form-group" id="createEvent" name="createEvent">
-                    <table>
+           
+                <form class="form-group" id="createEvent" name="createEvent" >
+                    <table align="center">
                         <tr>
                             <td class="text-right">
                                 <label for="Etitle">* Event Title</label>
@@ -81,14 +81,7 @@
                                 <input type="date" name="Sdate">
                             </td>
                         </tr>
-						<tr>
-                            <td class="text-right">
-                                <label for="Edate">* End Date</label>
-                            </td>
-                            <td class="text-left">
-                                <input type="date" name="Edate">
-                            </td>
-                        </tr>
+						
                         <tr>
                             <td class="text-right">
                                 <label for="sTime">* Start Time</label>
@@ -97,14 +90,7 @@
                                 <input type="time" name="Stime">
                             </td>
                         </tr>
-						<tr>
-                            <td class="text-right">
-                                <label for="ETime">* End Time</label>
-                            </td>
-                            <td class="text-left">
-                                <input type="time" name="Etime">
-                            </td>
-                        </tr>
+						
 						<tr>
                             <td class="text-right">
                                 <label for="logo">Upload Event Logo</label>
@@ -126,7 +112,14 @@
                                 <label for="city">City</label>
                             </td>
                             <td class="text-left">
-                                <input type="text" id="city">
+                                <select>
+								  <option value="Kitchener">Kitchener</option>
+								  <option value="Waterloo">Waterloo</option>
+								  <option value="Cambridge">Cambridge </option>
+								  <option value="Guelph">Guelph</option>
+								  <option value="Milton">Milton </option>
+								  <option value="Brantford">Brantford</option>
+								</select>
                             </td>
                         </tr>
                         <tr>
@@ -149,6 +142,14 @@
                                     <option value="sk">SK</option>
                                     <option value="yt">YT</option>
                                 </select>
+                            </td>
+                        </tr>
+						<tr>
+                            <td class="text-right">
+                                <label for="PCode">Postal Code</label>
+                            </td>
+                            <td class="text-left">
+                                <input type="text" id="PCode">
                             </td>
                         </tr>
 						<tr>
@@ -177,7 +178,7 @@
             </div>
 
       
-        </div>
+       
       <div class="modal fade" id="confirmDetails" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
