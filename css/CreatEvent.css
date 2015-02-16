@@ -1,0 +1,11 @@
+label {padding-top: 10px;}
+
+#submitNewCategory {margin-top: 10px;}
+
+div.centre
+{
+  width: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
