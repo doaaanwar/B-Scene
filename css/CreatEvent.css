@@ -26,6 +26,11 @@ textarea{
 		margin: 8px;
 		width: 300px;
 }
+.lead
+{
+font-size: 15px;
+color: red;
+}
 
 
 
