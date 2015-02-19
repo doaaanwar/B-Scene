@@ -9,6 +9,17 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+
+	<!-- cdn for modernizr, if you haven't included it already -->
+	<script src="http://cdn.jsdelivr.net/webshim/1.12.4/extras/modernizr-custom.js"></script>
+	<!-- polyfiller file to detect and load polyfills -->
+	<script src="http://cdn.jsdelivr.net/webshim/1.12.4/polyfiller.js"></script>
+	<script>
+	  webshims.setOptions('waitReady', false);
+	  webshims.setOptions('forms-ext', {types: 'date'});
+	  webshims.polyfill('forms forms-ext');
+	</script>
+
     <title>Create Category</title>
 
     <!-- Bootstrap Core CSS -->
@@ -17,7 +28,7 @@
     <!-- Custom CSS -->
     <link href="css/sb-admin.css" rel="stylesheet">
     <link href="css/createCategory.css" rel="stylesheet">
-
+    <link href="css/CreatEvent.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -176,7 +187,6 @@
 
             <div class="container-fluid">
 
-                <!-- Page Heading -->
                <div class="container">
 
         <div class="starter-template">
@@ -191,7 +201,7 @@
                                 <label for="Etitle">* Event Title</label>
                             </td>
                             <td class="text-left">
-                                <input type="text" id="eTitle" required>
+                                <input type="text" id="Etitle" required>
                             </td>
                         </tr>
                         <tr>
@@ -199,7 +209,7 @@
                                 <label for="Sdate">* Start Date</label>
                             </td>
                             <td class="text-left">
-                                <input type="date" name="Sdate">
+                                <input type="date" name="Sdate" required>
                             </td>
                         </tr>
 						
@@ -208,10 +218,67 @@
                                 <label for="sTime">* Start Time</label>
                             </td>
                             <td class="text-left">
-                                <input type="time" name="Stime">
+                                <input type="time" name="Stime" required>
+                            </td>
+                        </tr><tr>
+                            <td class="text-right">
+                                <label for="Edate"> End Date</label>
+                            </td>
+                            <td class="text-left">
+                                <input type="date" name="Edate" >
                             </td>
                         </tr>
 						
+                        <tr>
+                            <td class="text-right">
+                                <label for="ETime"> End Time</label>
+                            </td>
+                            <td class="text-left">
+                                <input type="time" name="Etime" >
+                            </td>
+                        </tr>
+						<tr>
+                            <td class="text-right">
+                                <label for="Category">* Category</label>
+                            </td>
+                            <td class="text-left">
+                                <select required>
+								  <option value="business">business</option>
+								  <option value="education">education</option>
+								  <option value="fprocessing">food processing</option>
+								  <option value="fmanufacturing">food manufacturing</option>
+								  <option value="hResources">human resources</option>
+								  <option value="iTechnology">information technology</option>
+								  <option value="industry">industry</option>
+								  <option value="mConsulting">management consulting</option>
+								  <option value="oManagement">operation management </option>
+								  <option value="pManagement">project management</option>
+								  <option value="sChain">supply chain </option>
+								  <option value="tour">tour</option>
+								</select>
+                            </td>
+                        </tr>
+						<tr>
+                            <td class="text-right">
+                                <label for="capacity">Guests Limit</label>
+                            </td>
+                            <td class="text-left">
+                                <input type="text" id="capacity" required>
+                            </td>
+                        </tr>
+						<tr>
+                            <td class="text-right">
+                                <label for="Repeats">Repeats</label>
+                            </td>
+                            <td class="text-left">
+                                <select>
+								  <option value="norepeat">does not repeat</option>
+								  <option value="rdaily">repeats daily </option>
+								  <option value="rweekly">repeats weekly </option>
+								  <option value="rmonthly">repeats monthly</option>
+								</select>
+                            </td>
+                        </tr>
 						<tr>
                             <td class="text-right">
                                 <label for="logo">Upload Event Logo</label>
@@ -226,6 +293,13 @@
                             </td>
                             <td class="text-left">
                                 <input type="text" id="address">
+                            </td>
+                        </tr><tr>
+                            <td class="text-right">
+                                <label for="address">Address Line 2</label>
+                            </td>
+                            <td class="text-left">
+                                <input type="text" id="address2">
                             </td>
                         </tr>
                         <tr>
@@ -257,7 +331,7 @@
                                     <option value="ns">NS</option>
                                     <option value="nt">NT</option>
                                     <option value="nu">NU</option>
-                                    <option value="on">ON</option>
+                                    <option value="on" selected="selected">ON</option>
                                     <option value="pe">PE</option>
                                     <option value="qc">QC</option>
                                     <option value="sk">SK</option>
@@ -285,7 +359,7 @@
                         <tr>
                             <td class="text-center" colspan="2">
                                 <!-- Button trigger modal -->
-                                <button type="submit" class="btn btn-warning" data-toggle="modal" data-target="#confirmDetails">
+                                <button type="submit" class="btn btn-warning" data-toggle="modal" data-target="#confirmDetails" id="submitProfile">
                                     Submit
                                 </button>
 
@@ -299,7 +373,7 @@
             </div>
 
       
-       
+         <!-- Modal -->
       <div class="modal fade" id="confirmDetails" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -314,51 +388,106 @@
                                 <td class="text-right">
                                     <label for="Etitle">Event Title</label>
                                 </td>
+								<td>
+									<div id="Etitle"></div>
+								</td>
                             </tr>
                             <tr>
                                 <td class="text-right">
                                     <label for="Sdate">Start Date</label>
                                 </td>
+								<td>
+									<div id="Sdate"></div>
+								</td>
                             </tr>
-                            <tr>
-                                <td class="text-right">
-                                    <label for="Edate"> End Date</label>
-                                </td>
-                            </tr>
+                            
                             <tr>
                                 <td class="text-right">
                                     <label for="Stime"> Start Time 	</label>
                                 </td>
+								<td>
+									<div id="Stime"></div>
+								</td>
+                            </tr><tr>
+                                <td class="text-right">
+                                    <label for="Edate">End Date</label>
+                                </td>
+								<td>
+									<div id="Edate"></div>
+								</td>
                             </tr>
+                            
                             <tr>
                                 <td class="text-right">
-                                    <label for="Etime">End Time</label>
+                                    <label for="Etime"> End Time 	</label>
                                 </td>
+								<td>
+									<div id="Etime"></div>
+								</td>
                             </tr>
+                            
                             <tr>
                                 <td class="text-right">
-                                    <label for="persUrl">URL</label>
+                                    <label for="capacity">Guest Limit</label>
                                 </td>
+								<td>
+									<div id="capacity"></div>
+								</td>
+                            </tr><tr>
+                                <td class="text-right">
+                                    <label for="Repeats">Repeats</label>
+                                </td>
+								<td>
+									<div id="Repeats"></div>
+								</td>
                             </tr>
                             <tr>
                                 <td class="text-right">
                                     <label for="Elogo">Event Logo</label>
                                 </td>
+								<td>
+									<div id="Elogo"></div>
+								</td>
                             </tr>
                             <tr>
                                 <td class="text-right">
                                     <label for="address">Street Address</label>
                                 </td>
+								<td>
+									<div id="address"></div>
+								</td>
+                            </tr>
+							<tr>
+                                <td class="text-right">
+                                    <label for="address2">Address Line 2</label>
+                                </td>
+								<td>
+									<div id="address2"></div>
+								</td>
                             </tr>
                             <tr>
                                 <td class="text-right">
                                     <label for="city">City</label>
                                 </td>
+								<td>
+									<div id="city"></div>
+								</td>
                             </tr>
                             <tr>
                                 <td class="text-right">
                                     <label for="province">Province</label>
                                 </td>
+								<td>
+									<div id="Province"></div>
+								</td>
+                            </tr>
+							<tr>
+                                <td class="text-right">
+                                    <label for="PCode">Postal Code</label>
+                                </td>
+								<td>
+									<div id="PCode"></div>
+								</td>
                             </tr>
                         </table>
                     </div>
@@ -371,22 +500,17 @@
         </div>
 
     </div>
+    <!-- /.container -->
 
-</div>
-<!-- /.container-fluid -->
 
-</div>
-<!-- /#page-wrapper -->
 
-</div>
-<!-- /#wrapper -->
 
-<!-- jQuery -->
-<script src="js/jquery.js"></script>
-
-<!-- Bootstrap Core JavaScript -->
-<script src="js/bootstrap.min.js"></script>
-
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <script src="js/confirmDetails.js"></script>
+    <script type="text/javascript">registerSubmitHandler("createEvent");</script>   
 </body>
 
 </html>
