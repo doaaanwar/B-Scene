@@ -130,6 +130,27 @@
                         </tr>
 						<tr>
                             <td class="text-right">
+                                <label for="capacity">Guests Limit</label>
+                            </td>
+                            <td class="text-left">
+                                <input type="text" id="capacity" required>
+                            </td>
+                        </tr>
+						<tr>
+                            <td class="text-right">
+                                <label for="Repeats">Repeats</label>
+                            </td>
+                            <td class="text-left">
+                                <select>
+								  <option value="norepeat">does not repeat</option>
+								  <option value="rdaily">repeats daily </option>
+								  <option value="rweekly">repeats weekly </option>
+								  <option value="rmonthly">repeats monthly</option>
+								</select>
+                            </td>
+                        </tr>
+						<tr>
+                            <td class="text-right">
                                 <label for="logo">Upload Event Logo</label>
                             </td>
                             <td class="text-left">
@@ -277,10 +298,17 @@
                             
                             <tr>
                                 <td class="text-right">
-                                    <label for="persUrl">URL</label>
+                                    <label for="capacity">Guest Limit</label>
                                 </td>
 								<td>
-									<div id="persUrl"></div>
+									<div id="capacity"></div>
+								</td>
+                            </tr><tr>
+                                <td class="text-right">
+                                    <label for="Repeats">Repeats</label>
+                                </td>
+								<td>
+									<div id="Repeats"></div>
 								</td>
                             </tr>
                             <tr>
