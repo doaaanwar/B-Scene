@@ -130,289 +130,322 @@
                         </ul>
                     </li>
                     <li class="dropdown">
-	                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Ada Lovelace<b class="caret"></b></a>
-	                    <ul class="dropdown-menu">
-	                        <li>
-	                            <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
-	                        </li>
-	                        <li>
-	                            <a href="#"><i class="fa fa-fw fa-envelope"></i> Inbox</a>
-	                        </li>
-	                        <li>
-	                            <a href="#"><i class="fa fa-fw fa-gear"></i> Settings</a>
-	                        </li>
-	                        <li class="divider"></li>
-	                        <li>
-	                            <a href="index.html"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
-	                        </li>
-	                    </ul>
-	                </li>
-                </ul>
-                <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
-                <div class="collapse navbar-collapse navbar-ex1-collapse">
-                   <ul class="nav navbar-nav side-nav">
-	                    <li class="active">
-	                        <a href="admin.html"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
-	                    </li>
-	                
-	                    <li>
-	                        <a href="adminCreateEvent.html"><i class="fa fa-fw fa-table"></i> New Event</a>
-	                    </li>
-	                    
-	                    <li>
-	                        <a href="createCategory.html"><i class="fa fa-fw fa-edit"></i> New Category</a>
-	                    </li>
-	                    
-	                     <li>
-	                        <a href="#"><i class="fa fa-group"></i> Organization List</a>
-	                    </li>
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Ada Lovelace<b class="caret"></b></a>
+                     <ul class="dropdown-menu">
+                         <li>
+                             <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
+                         </li>
+                         <li>
+                             <a href="#"><i class="fa fa-fw fa-envelope"></i> Inbox</a>
+                         </li>
+                         <li>
+                             <a href="#"><i class="fa fa-fw fa-gear"></i> Settings</a>
+                         </li>
+                         <li class="divider"></li>
+                         <li>
+                             <a href="index.html"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                         </li>
+                     </ul>
+                 </li>
+             </ul>
+             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+             <div class="collapse navbar-collapse navbar-ex1-collapse">
+               <ul class="nav navbar-nav side-nav">
+                 <li class="active">
+                     <a href="admin.html"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
+                 </li>
 
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </nav>
+                 <li>
+                     <a href="adminCreateEvent.html"><i class="fa fa-fw fa-table"></i> New Event</a>
+                 </li>
 
-        <div id="page-wrapper">
+                 <li>
+                     <a href="createCategory.html"><i class="fa fa-fw fa-edit"></i> New Category</a>
+                 </li>
 
-            <div class="container-fluid">
+                 <li>
+                     <a href="#"><i class="fa fa-group"></i> Organization List</a>
+                 </li>
 
-                <!-- Page Heading -->
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h1 class="page-header">
-                            Create New Category
-                        </h1>
-                        <ol class="breadcrumb">
-                            <li>
-                                <i class="fa fa-dashboard"></i>  <a href="admin.html">Dashboard</a>
-                            </li>
-                            <li class="active">
-                                <i class="fa fa-edit"></i> Create New Category
-                            </li>
-                        </ol>
-                    </div>
+             </ul>
+         </div>
+         <!-- /.navbar-collapse -->
+     </nav>
+
+     <div id="page-wrapper">
+
+        <div class="container-fluid">
+
+            <!-- Page Heading -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">
+                        Create New Category
+                    </h1>
+                    <ol class="breadcrumb">
+                        <li>
+                            <i class="fa fa-dashboard"></i>  <a href="admin.html">Dashboard</a>
+                        </li>
+                        <li class="active">
+                            <i class="fa fa-edit"></i> Create New Category
+                        </li>
+                    </ol>
                 </div>
-                <!-- /.row -->
+            </div>
+            <!-- /.row -->
 
-                <div class="row">
+            <div class="row">
+                <div class="col-lg-6">
+
+                    <form role="form" class="form-group" id="createCategory">
+
+                        <div>
+                            <label>Category Name</label>
+                            <input class="form-control" id="categoryName">
+                        </div>
+                        <div>
+                            <label>Category Image</label>
+                            <input type="file" id="categoryImage">
+                        </div>
+
+                        <div>
+                            <label>Category Description</label>
+                            <textarea class="form-control" rows="3"></textarea>
+                        </div>
+                        <div>
+                            <label>Category Ranking</label><br>
+                            <label class="radio-inline">
+                                <input type="radio" name="ranking" value="1">1
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="ranking" value="2">2
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="ranking" value="3">3
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="ranking" value="4">4
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="ranking" value="5">5
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="ranking" value="6">6
+                            </label>                                
+                            <label class="radio-inline">
+                                <input type="radio" name="ranking" value="7">7
+                            </label>                                
+                            <label class="radio-inline">
+                                <input type="radio" name="ranking" value="8">8
+                            </label>                                
+                            <label class="radio-inline">
+                                <input type="radio" name="ranking" value="9">9
+                            </label>                                
+                            <label class="radio-inline">
+                                <input type="radio" name="ranking" value="10">10
+                            </label>
+                        </div>
+                    </div>
                     <div class="col-lg-6">
 
-                        <form role="form" class="form-group" id="createCategory">
 
-                            <div>
-                                <label>Category Name</label>
-                                <input class="form-control" id="categoryName">
-                            </div>
-                            <div>
-                                <label>Category Image</label>
-                                <input type="file" id="categoryImage">
-                            </div>
-
-                            <div>
-                                <label>Category Description</label>
-                                <textarea class="form-control" rows="3"></textarea>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-
-
-                            <div class="col-md-4">
-                                <table>
-                                    <tr>
-                                        <th>
-                                            <h4>Corresponding Meetup.com categories</h4>
-                                        </th>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <label class="radio-inline">
-                                                <input type="radio" name="meetup">Career &amp; Business
-                                            </label>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <label class="radio-inline">
-                                                <input type="radio" name="meetup">Community &amp; Environment
-                                            </label>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <label class="radio-inline">
-                                                <input type="radio" name="meetup">Education &amp; Learning
-                                            </label>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <label class="radio-inline">
-                                                <input type="radio" name="meetup">Food &amp; Drink
-                                            </label>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <label class="radio-inline">
-                                                <input type="radio" name="meetup">Health &amp; Wellbeing
-                                            </label>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <label class="radio-inline">
-                                                <input type="radio" name="meetup">Lifestyle
-                                            </label>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <label class="radio-inline">
-                                                <input type="radio" name="meetup">Movements &amp; Politics
-                                            </label>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <label class="radio-inline">
-                                                <input type="radio" name="meetup">Socializing
-                                            </label>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <label class="radio-inline">
-                                                <input type="radio" name="meetup">Support
-                                            </label>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <label class="radio-inline">
-                                                <input type="radio" name="meetup">Tech
-                                            </label>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </div>
-
-                            <div class="col-md-4">
-                                <table>
-                                    <tr>
-                                        <th>
-                                            <h4>Corresponding EventBrite.com categories</h4>
-                                        </th>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <label class="radio-inline">
-                                                <input type="radio" name="eventbrite">Business
-                                            </label>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <label class="radio-inline">
-                                                <input type="radio" name="eventbrite">Science &amp; Tech
-                                            </label>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <label class="radio-inline">
-                                                <input type="radio" name="eventbrite">Health &amp; Wellness
-                                            </label>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <label class="radio-inline">
-                                                <input type="radio" name="eventbrite">Food &amp; Drink
-                                            </label>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <label class="radio-inline">
-                                                <input type="radio" name="eventbrite">Charity &amp; Causes
-                                            </label>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <label class="radio-inline">
-                                                <input type="radio" name="eventbrite">Government
-                                            </label>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <label class="radio-inline">
-                                                <input type="radio" name="eventbrite">Community
-                                            </label>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <label class="radio-inline">
-                                                <input type="radio"  name="eventbrite">Other
-                                            </label>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </div>
-                            <div class="col-md-4">
-                                <table>
-                                    <tr>
-                                        <th>
-                                            <h4>Corresponding EventFul.com categories</h4>
-                                        </th>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <label class="radio-inline">
-                                                <input type="radio" name="eventful">Conferences
-                                            </label>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <label class="radio-inline">
-                                                <input type="radio" name="eventful">Education
-                                            </label>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <label class="radio-inline">
-                                                <input type="radio" name="eventful">Food
-                                            </label>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <label class="radio-inline">
-                                                <input type="radio" name="eventful">Fundraisers
-                                            </label>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <label class="radio-inline">
-                                                <input type="radio" name="eventful">Networking
-                                            </label>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                           <label class="radio-inline">
-                                               <input type="radio" name="eventful">Organizations
-                                           </label>
-                                       </td>
-                                   </tr>
-                                   <tr>
+                        <div class="col-md-4">
+                            <table>
+                                <tr>
+                                    <th>
+                                        <h4>Corresponding Meetup.com categories</h4>
+                                    </th>
+                                </tr>
+                                <tr>
                                     <td>
                                         <label class="radio-inline">
+                                            <input type="radio" name="meetup">Career &amp; Business
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="meetup">Community &amp; Environment
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="meetup">Education &amp; Learning
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="meetup">Food &amp; Drink
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="meetup">Health &amp; Wellbeing
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="meetup">Lifestyle
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="meetup">Movements &amp; Politics
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="meetup">Socializing
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="meetup">Support
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="meetup">Tech
+                                        </label>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="col-md-4">
+                            <table>
+                                <tr>
+                                    <th>
+                                        <h4>Corresponding EventBrite.com categories</h4>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="eventbrite">Business
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="eventbrite">Science &amp; Tech
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="eventbrite">Health &amp; Wellness
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="eventbrite">Food &amp; Drink
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="eventbrite">Charity &amp; Causes
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="eventbrite">Government
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="eventbrite">Community
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="radio-inline">
+                                            <input type="radio"  name="eventbrite">Other
+                                        </label>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="col-md-4">
+                            <table>
+                                <tr>
+                                    <th>
+                                        <h4>Corresponding EventFul.com categories</h4>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="eventful">Conferences
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="eventful">Education
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="eventful">Food
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="eventful">Fundraisers
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="eventful">Networking
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                       <label class="radio-inline">
+                                           <input type="radio" name="eventful">Organizations
+                                       </label>
+                                   </td>
+                               </tr>
+                               <tr>
+                                <td>
+                                    <label class="radio-inline">
                                         <input type="radio" name="eventful">Sales
                                     </label>
                                 </td>
@@ -420,41 +453,41 @@
                             <tr>
                                 <td>
                                     <label class="radio-inline">
-                                    <input type="radio" name="eventful">Science
-                                </label>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label class="radio-inline">
-                                <input type="radio" name="eventful">Technology
-                            </label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label class="radio-inline">
-                            <input type="radio" name="eventful">Other
-                        </label>
-                    </td>
-                </tr>
+                                        <input type="radio" name="eventful">Science
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="eventful">Technology
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="eventful">Other
+                                    </label>
+                                </td>
+                            </tr>
 
-            </table>
+                        </table>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-warning" type="submit" id="submitNewCategory">Submit</button>
+                </div>
+
+            </form>
+
+            <!-- /.row -->
+
         </div>
+        <!-- /.container-fluid -->
+
     </div>
-    <div class="text-center">
-        <button class="btn btn-warning" type="submit" id="submitNewCategory">Submit</button>
-    </div>
-
-</form>
-
-<!-- /.row -->
-
-</div>
-<!-- /.container-fluid -->
-
-</div>
-<!-- /#page-wrapper -->
+    <!-- /#page-wrapper -->
 
 </div>
 <!-- /#wrapper -->
