@@ -17,6 +17,9 @@
 
     <!-- Custom CSS -->
     <link href="css/shop-item.css" rel="stylesheet">
+	
+	<!-- style sheet fot calender -->
+    <link href="http://addtocalendar.com/atc/1.5/atc-style-blue.css" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -28,7 +31,15 @@
     </head>
 
     <body>
-
+	<!-- Calender  script -->
+<script type="text/javascript">(function () {
+            if (window.addtocalendar)if(typeof window.addtocalendar.start == "function")return;
+            if (window.ifaddtocalendar == undefined) { window.ifaddtocalendar = 1;
+                var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
+                s.type = 'text/javascript';s.charset = 'UTF-8';s.async = true;
+                s.src = ('https:' == window.location.protocol ? 'https' : 'http')+'://addtocalendar.com/atc/1.5/atc.min.js';
+                var h = d[g]('body')[0];h.appendChild(s); }})();
+    </script>
         <!-- Navigation -->
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="container">
@@ -177,7 +188,19 @@
                 </div>
             </div>
 			<div class="col-md-3">
-           <a href="http://www.google.com/calendar/event?action=TEMPLATE&amp;text=Example%20event%20-%20Option%201&amp;dates=20110206T190000Z/20110206T200000Z&amp;details=Fake%20event%20for%20testing.%0A%0AFor%20details%2C%20visit%20http%3A%2F%2Fendzonerealty.com%2Fblog%2F2011%2Fcreate-an-add-to-google-calendar-button-for-a-single-event-eventbrite-facebook-too%2F&amp;location=&amp;trp=false&amp;sprop=http%3A%2F%2Fendzonerealty.com%2F&amp;sprop=name:EndZoneRealty.com" target="_blank"><img src="http://www.google.com/calendar/images/ext/gc_button6.gif" alt="" border="0"></a>
+			<!-- 3. Place event data -->
+    <span class="addtocalendar atc-style-blue">
+        <var class="atc_event">
+            <var class="atc_date_start">2015-05-04 12:00:00</var>
+            <var class="atc_date_end">2015-05-04 18:00:00</var>
+            <var class="atc_timezone">Europe/London</var>
+            <var class="atc_title">Conestoga College Family day</var>
+            <var class="atc_description">An event that gives the opportunity of the community to engage with their kids, families and friends to socialize, have a fun day enjoy the weather in Conestoga College Campus. </var>
+            <var class="atc_location">Kitchener</var>
+            <var class="atc_organizer">Conestoga College</var>
+            <var class="atc_organizer_email">info@conestogac.on.ca</var>
+        </var>
+    </span>
 			</div>
         </div>
 
