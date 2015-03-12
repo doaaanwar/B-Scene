@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,6 +17,9 @@
 
     <!-- Custom CSS -->
     <link href="css/shop-item.css" rel="stylesheet">
+	
+	<!-- style sheet fot calender -->
+    <link href="http://addtocalendar.com/atc/1.5/atc-style-blue.css" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -27,7 +31,15 @@
     </head>
 
     <body>
-
+	<!-- Calender  script -->
+<script type="text/javascript">(function () {
+            if (window.addtocalendar)if(typeof window.addtocalendar.start == "function")return;
+            if (window.ifaddtocalendar == undefined) { window.ifaddtocalendar = 1;
+                var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
+                s.type = 'text/javascript';s.charset = 'UTF-8';s.async = true;
+                s.src = ('https:' == window.location.protocol ? 'https' : 'http')+'://addtocalendar.com/atc/1.5/atc.min.js';
+                var h = d[g]('body')[0];h.appendChild(s); }})();
+    </script>
         <!-- Navigation -->
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="container">
@@ -39,7 +51,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="indexAfterLogin.html">BScene</a>
+                    <a class="navbar-brand" href="index.html">BScene</a>
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -67,17 +79,17 @@
 
             <div class="row">
 
-
+                
 
                 <div class="col-md-9">
 
                     <div class="thumbnail">
-                        <img class="img-responsive" src="http://placehold.it/800x300" alt="">
+                        <img class="img-responsive" src="http://lorempixel.com/800/300/people" alt="">
                         <div class="caption-full">
                             <h4 class="pull-right">$24.99</h4>
                             <h4><a href="#">Conestoga College Family day</a>
                             </h4>
-
+                            
                             <p>An event that gives the opportunity of the community to engage with their kids, families and friends to socialize, have a fun day enjoy the weather in Conestoga College Campus.  </p>
                             <div align="right">
                              <button type="button" class="btn btn-warning" onclick="location.href='editEvent.html'">
@@ -85,173 +97,245 @@
                            </button>
                        </div>
 
-                       <div id="share-buttons">		
-                          <!-- Facebook -->
-                          <a href="http://www.facebook.com/sharer.php?u=http://www.simplesharebuttons.com" target="_blank"><img src="http://www.simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" /></a>
-
-                          <!-- Twitter -->
-                          <a href="http://twitter.com/share?url=http://www.simplesharebuttons.com&text=Simple Share Buttons&hashtags=simplesharebuttons" target="_blank"><img src="http://www.simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" /></a>
-
-                          <!-- Google+ -->
-                          <a href="https://plus.google.com/share?url=http://www.simplesharebuttons.com" target="_blank"><img src="http://www.simplesharebuttons.com/images/somacro/google.png" alt="Google" /></a>
+							 
+                            <div id="share-buttons">		
+                              <!-- Facebook -->
+                              <a href="http://www.facebook.com/sharer.php?u=http://www.simplesharebuttons.com" target="_blank"><img src="http://www.simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" /></a>
+                              
+                              <!-- Twitter -->
+                              <a href="http://twitter.com/share?url=http://www.simplesharebuttons.com&text=Simple Share Buttons&hashtags=simplesharebuttons" target="_blank"><img src="http://www.simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" /></a>
+                              
+                              <!-- Google+ -->
+                              <a href="https://plus.google.com/share?url=http://www.simplesharebuttons.com" target="_blank"><img src="http://www.simplesharebuttons.com/images/somacro/google.png" alt="Google" /></a>
+                          </div>
                       </div>
-                  </div>
-                  <div class="ratings">
-                    <p class="pull-right">3 reviews</p>
-                    <p>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star-empty"></span>
-                        4.0 stars
-                    </p>
+                      <div class="ratings">
+                        <p class="pull-right">3 reviews</p>
+                        <p>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star-empty"></span>
+                            4.0 stars
+                        </p>
+                    </div>
+                </div>
+				 <div class="well">
+				 <h4 class="createOrg">Speaker:</h4> <br>
+                      <a data-toggle="collapse" href="#collapseSpeaker" aria-expanded="false" aria-controls="collapseSpeaker">Steve Job</a>
+				  
+                    
+					
+                      
+					 entrepreneur</p>
+                         
+					 <h6> <a href="speakerSearch.html">more events for this speaker</a></h6>
+					 
+        </div>
+    
+                <div class="collapse" id="collapseSpeaker">
+                  <div class="well">
+                    <form class="form-group" id="createNew">
+                        <table>
+                        <tr>
+                            <td class="text-right">
+                                <label for="name">Name: </label>
+                            </td>
+                            <td id="name" class="userInfo">
+                                <p>Steve Jobs</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-right">
+                                <label for="Title">Title: </label>
+                            </td>
+                            <td id="Title" class="userInfo">
+                                <p>entrepreneur</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-right">
+                                <label for="biography">biography: </label>
+                            </td>
+                            <td id="biography" class="userInfo">
+                                <p>Steve Jobs is the authorized biography of Steve Jobs. The biography was written at the request of Jobs by Walter Isaacson, a former executive at CNN and Time who has written best-selling biographies of Benjamin Franklin and Albert Einstein</p>
+                            </td>
+                        </tr>
+                       
+                        </table>
+                    </form>
+                </div>
+           
+				 </div>
+				  <div class="well">
+					 <h4>Organization: </h4><a href="Organization.html">Conestoga Collega Institution</a>
+				
+					
+				 </div>
+
+                <div class="well">
+
+                    <div class="text-right">
+                        <button type="submit" class="btn btn-warning" data-toggle="modal" data-target="#addComment">Leave a Review</a>
+                        </div>
+
+                        <hr>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star-empty"></span>
+                                Anonymous
+                                <span class="pull-right">10 days ago</span>
+                                <p>This event was great. I would definitely attend it again!</p>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star-empty"></span>
+                                Anonymous
+                                <span class="pull-right">12 days ago</span>
+                                <p>I've already registered for the next one!</p>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <span class="glyphicon glyphicon-star-empty"></span>
+                                Anonymous
+                                <span class="pull-right">15 days ago</span>
+                                <p>I've seen some better than this, but not at the time convenient and the location. I definitely recommend this item.</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+               
+                </div>
+                
+                <div class="col-md-3">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2895.6973408370573!2d-80.47871339999999!3d43.4669155!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882bf4a1d7cd7f29%3A0xc5f6b0fc00b1a370!2s900+Guelph+St+%23204%2C+Kitchener%2C+ON+N2H+5Z2!5e0!3m2!1sen!2sca!4v1413859469778" width="260" height="310" frameborder="0" style="border:0"></iframe>
+                    <div class="well">
+                       <p>Conestoga Knowledge Exchange</p>
+                       <p>900 Guelph Street</p>
+                       <p>Unit 204</p>
+                       <p>Kitchener,ON, N2C 2L8</p>
+                   </div>
+               </div>
+               <div class="col-md-3">
+                <p class="lead">Related Events</p>
+                <div class="list-group">
+                    <a href="#" class="list-group-item">Learn how to eat healty</a>
+                    <a href="#" class="list-group-item">Conestoga College Family day</a>
+                    <a href="#" class="list-group-item">Active Day</a>
                 </div>
             </div>
-
-            <div class="well">
-
-                <div class="text-right">
-                      <button type="submit" class="btn btn-success" data-toggle="modal" data-target="#addComment">Leave a Review
-                      </a>
-                </div>
-
-                <hr>
-
-                <div class="row">
-                    <div class="col-md-12">
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star-empty"></span>
-                        Anonymous
-                        <span class="pull-right">10 days ago</span>
-                        <p>This event was great. I would definitely attend it again!</p>
-                    </div>
-                </div>
-
-                <hr>
-
-                <div class="row">
-                    <div class="col-md-12">
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star-empty"></span>
-                        Anonymous
-                        <span class="pull-right">12 days ago</span>
-                        <p>I've already registered for the next one!</p>
-                    </div>
-                </div>
-
-                <hr>
-
-                <div class="row">
-                    <div class="col-md-12">
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star-empty"></span>
-                        Anonymous
-                        <span class="pull-right">15 days ago</span>
-                        <p>I've seen some better than this, but not at the time convenient and the location. I definitely recommend this item.</p>
-                    </div>
-                </div>
-
-            </div>
-
+			<div class="col-md-3">
+			<!-- 3. Place event data -->
+    <span class="addtocalendar atc-style-blue">
+        <var class="atc_event">
+            <var class="atc_date_start">2015-05-04 12:00:00</var>
+            <var class="atc_date_end">2015-05-04 18:00:00</var>
+            <var class="atc_timezone">Europe/London</var>
+            <var class="atc_title">Conestoga College Family day</var>
+            <var class="atc_description">An event that gives the opportunity of the community to engage with their kids, families and friends to socialize, have a fun day enjoy the weather in Conestoga College Campus. </var>
+            <var class="atc_location">Kitchener</var>
+            <var class="atc_organizer">Conestoga College</var>
+            <var class="atc_organizer_email">info@conestogac.on.ca</var>
+        </var>
+    </span>
+			</div>
         </div>
 
-        <div class="col-md-3">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2895.6973408370573!2d-80.47871339999999!3d43.4669155!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882bf4a1d7cd7f29%3A0xc5f6b0fc00b1a370!2s900+Guelph+St+%23204%2C+Kitchener%2C+ON+N2H+5Z2!5e0!3m2!1sen!2sca!4v1413859469778" width="260" height="310" frameborder="0" style="border:0"></iframe>
-            <div class="well">
-               <p>Conestoga Knowledge Exchange</p>
-               <p>900 Guelph Street</p>
-               <p>Unit 204</p>
-               <p>Kitchener,ON, N2C 2L8</p>
-           </div>
-       </div>
-       <div class="col-md-3">
-        <p class="lead">Related Events</p>
-        <div class="list-group">
-            <a href="#" class="list-group-item">Learn how to eat healty</a>
-            <a href="#" class="list-group-item">Conestoga College Family day</a>
-            <a href="#" class="list-group-item">Active Day</a>
+    </div>
+
+    <div class="modal fade" id="addComment" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">Comment on this Event</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-group">
+                        <table>
+                            <tr>
+                                <td class="text-right">
+                                    <label for="username">Username</label>
+                                </td>
+                                <td>
+                                    <input type="text" id="username"  class="form-control" required>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-right">
+                                    <label for="email">E-Mail Address</label>
+                                </td>
+                                <td>
+                                    <input type="email" id="email" class="form-control" required>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-right">
+                                    <label for="comment">Comment</label>
+                                </td>
+                                <td>
+                                    <textarea id="comment"  class="form-control" rows="5" required></textarea>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-warning">Save changes</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
-<!-- /.container -->
+    <!-- /.container -->
 
-<div class="container">
+    <div class="container">
 
-    <hr>
+        <hr>
 
-    <!-- Footer -->
-    <footer>
-        <div class="row">
-            <div class="col-lg-12">
-                <p>Copyright &copy; BScene 2015</p>
-            </div>
-        </div>
-    </footer>
-
-</div>
-
-<div class="modal fade" id="addComment" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
-                </button>
-                <h4 class="modal-title" id="myModalLabel">Comment on this Event</h4>
-            </div>
-            <div class="modal-body">
-                <form class="form-group">
-                    <table>
-                        <tr>
-                            <td class="text-right">
-                                <label for="username">Username</label>
-                            </td>
-                            <td>
-                                <input type="text" id="username"  class="form-control" required>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="text-right">
-                                <label for="email">E-Mail Address</label>
-                            </td>
-                            <td>
-                                <input type="email" id="email" class="form-control" required>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="text-right">
-                                <label for="comment">Comment</label>
-                            </td>
-                            <td>
-                                <textarea id="comment"  class="form-control" rows="5" required></textarea>
-                            </td>
-                        </tr>
-                    </table>
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; BScene 2015</p>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-warning">Save changes</button>
-                </form>
             </div>
-        </div>
+        </footer>
+
     </div>
-</div>
-<!-- /.container -->
+    <!-- /.container -->
 
-<!-- jQuery -->
-<script src="js/jquery.js"></script>
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
 
-<!-- Bootstrap Core JavaScript -->
-<script src="js/bootstrap.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
 
 </body>
 
 </html>
+
