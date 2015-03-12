@@ -8,18 +8,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
-	
-	
-	<!-- cdn for modernizr, if you haven't included it already -->
-<script src="http://cdn.jsdelivr.net/webshim/1.12.4/extras/modernizr-custom.js"></script>
-<!-- polyfiller file to detect and load polyfills -->
-<script src="http://cdn.jsdelivr.net/webshim/1.12.4/polyfiller.js"></script>
-<script>
-  webshims.setOptions('waitReady', false);
-  webshims.setOptions('forms-ext', {types: 'date'});
-  webshims.polyfill('forms forms-ext');
-</script>
+    <link rel="icon" href="../../favicon.ico">	
+    <!-- cdn for modernizr, if you haven't included it already -->
+    <script src="http://cdn.jsdelivr.net/webshim/1.12.4/extras/modernizr-custom.js"></script>
+    <!-- polyfiller file to detect and load polyfills -->
+    <script src="http://cdn.jsdelivr.net/webshim/1.12.4/polyfiller.js"></script>
+    <script>
+    webshims.setOptions('waitReady', false);
+    webshims.setOptions('forms-ext', {types: 'date'});
+    webshims.polyfill('forms forms-ext');
+    </script>
 
 
     <title>Create An Event</title>
@@ -29,7 +27,7 @@
 
     <!-- Custom styles for this template -->
     <link href="css/starter-template.css" rel="stylesheet">
-    <link href="css/CreatEvent.css" rel="stylesheet">
+    <link href="css/CreateEvent.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -39,10 +37,10 @@
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-</head>
+      <![endif]-->
+  </head>
 
-<body>
+  <body>
 
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
@@ -77,447 +75,356 @@
             <h1>Post an Event</h1>
             <p class="lead">All fields marked with * are required</p>
 
-           
-                <form class="form-group" id="createEvent" name="createEvent" >
-                    <table align="center">
-                        <tr>
-                            <td class="text-right">
-                                <label for="Etitle">* Event Title</label>
-                            </td>
-                            <td class="text-left">
-                                <input type="text" id="Etitle" required>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="text-right">
-                                <label for="Sdate">* Start Date</label>
-                            </td>
-                            <td class="text-left">
-                                <input type="date" name="Sdate" required>
-                            </td>
-                        </tr>
-						
-                        <tr>
-                            <td class="text-right">
-                                <label for="sTime">* Start Time</label>
-                            </td>
-                            <td class="text-left">
-                                <input type="time" name="Stime" required>
-                            </td>
-                        </tr><tr>
-                            <td class="text-right">
-                                <label for="Edate"> End Date</label>
-                            </td>
-                            <td class="text-left">
-                                <input type="date" name="Edate" >
-                            </td>
-                        </tr>
-						
-                        <tr>
-                            <td class="text-right">
-                                <label for="ETime"> End Time</label>
-                            </td>
-                            <td class="text-left">
-                                <input type="time" name="Etime" >
-                            </td>
-                        </tr>
-						<tr>
-                            <td class="text-right">
-                                <label for="Category">* Category</label>
-                            </td>
-                            <td class="text-left">
-                                <select required>
-								  <option value="business">business</option>
-								  <option value="education">education</option>
-								  <option value="fprocessing">food processing</option>
-								  <option value="fmanufacturing">food manufacturing</option>
-								  <option value="hResources">human resources</option>
-								  <option value="iTechnology">information technology</option>
-								  <option value="industry">industry</option>
-								  <option value="mConsulting">management consulting</option>
-								  <option value="oManagement">operation management </option>
-								  <option value="pManagement">project management</option>
-								  <option value="sChain">supply chain </option>
-								  <option value="tour">tour</option>
-								</select>
-                            </td>
-                        </tr>
-						<tr>
-                            <td class="text-right">
-                                <label for="capacity">Guests Limit</label>
-                            </td>
-                            <td class="text-left">
-                                <input type="text" id="capacity" required>
-                            </td>
-                        </tr>
-						<tr>
-                            <td class="text-right">
-                                <label for="Repeats">Repeats</label>
-                            </td>
-                            <td class="text-left">
-                                <select>
-								  <option value="norepeat">does not repeat</option>
-								  <option value="rdaily">repeats daily </option>
-								  <option value="rweekly">repeats weekly </option>
-								  <option value="rmonthly">repeats monthly</option>
-								</select>
-                            </td>
-                        </tr>
-						<tr>
-                            <td class="text-right">
-                                <label for="logo">Upload Event Logo</label>
-                            </td>
-                            <td class="text-left">
-                                <input type="file" id="Elogo">
-                            </td>
-                        </tr>
-						<tr>
-                            <td class="text-right">
-                                <label for="address">Street Address</label>
-                            </td>
-                            <td class="text-left">
-                                <input type="text" id="address">
-                            </td>
-                        </tr><tr>
-                            <td class="text-right">
-                                <label for="address">Address Line 2</label>
-                            </td>
-                            <td class="text-left">
-                                <input type="text" id="address2">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="text-right">
-                                <label for="city">City</label>
-                            </td>
-                            <td class="text-left">
-                                <select>
-								  <option value="Kitchener">Kitchener</option>
-								  <option value="Waterloo">Waterloo</option>
-								  <option value="Cambridge">Cambridge </option>
-								  <option value="Guelph">Guelph</option>
-								  <option value="Milton">Milton </option>
-								  <option value="Brantford">Brantford</option>
-								</select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="text-right">
-                                <label for="province">Province</label>
-                            </td>
-                            <td class="text-left">
-                                <select id="province">
-                                    <option value="ab">AB</option>
-                                    <option value="bc">BC</option>
-                                    <option value="mb">MB</option>
-                                    <option value="nb">NB</option>
-                                    <option value="nl">NL</option>
-                                    <option value="ns">NS</option>
-                                    <option value="nt">NT</option>
-                                    <option value="nu">NU</option>
-                                    <option value="on" selected="selected">ON</option>
-                                    <option value="pe">PE</option>
-                                    <option value="qc">QC</option>
-                                    <option value="sk">SK</option>
-                                    <option value="yt">YT</option>
-                                </select>
-                            </td>
-                        </tr>
-						<tr>
-                            <td class="text-right">
-                                <label for="PCode">Postal Code</label>
-                            </td>
-                            <td class="text-left">
-                                <input type="text" id="PCode">
-                            </td>
-                        </tr>
-						<tr>
-                            <td class="text-right">
-                                <label for="ETime">* Description</label>
-                            </td>
-                            <td class="text-left">
-								<textarea name="comments" cols="25" rows="5">Enter Event's Description here...</textarea>
-                            </td>
-                        </tr>
-		
-                        <tr>
-                            <td class="text-center" colspan="2">
-                                <!-- Button trigger modal -->
-                                <button type="submit" class="btn btn-warning" data-toggle="modal" data-target="#confirmDetails" id="submitProfile">
-                                    Submit
-                                </button>
+
+            <form class="form-group" id="createEvent" name="createEvent" >
+                <table align="center">
+                    <tr>
+                        <td class="text-right">
+                            <label for="Etitle">* Event Title</label>
+                        </td>
+                        <td class="text-left">
+                            <input type="text" id="Etitle" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-right">
+                            <label for="Sdate">* Start Date</label>
+                        </td>
+                        <td class="text-left">
+                            <input type="date" name="Sdate" required>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="text-right">
+                            <label for="sTime">* Start Time</label>
+                        </td>
+                        <td class="text-left">
+                            <input type="time" name="Stime" required>
+                        </td>
+                    </tr><tr>
+                    <td class="text-right">
+                        <label for="Edate"> End Date</label>
+                    </td>
+                    <td class="text-left">
+                        <input type="date" name="Edate" >
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="text-right">
+                        <label for="ETime"> End Time</label>
+                    </td>
+                    <td class="text-left">
+                        <input type="time" name="Etime" >
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-right">
+                        <label for="Category">* Category</label>
+                    </td>
+                    <td class="text-left">
+                        <select required>
+                          <option value="business">business</option>
+                          <option value="education">education</option>
+                          <option value="fprocessing">food processing</option>
+                          <option value="fmanufacturing">food manufacturing</option>
+                          <option value="hResources">human resources</option>
+                          <option value="iTechnology">information technology</option>
+                          <option value="industry">industry</option>
+                          <option value="mConsulting">management consulting</option>
+                          <option value="oManagement">operation management </option>
+                          <option value="pManagement">project management</option>
+                          <option value="sChain">supply chain </option>
+                          <option value="tour">tour</option>
+                      </select>
+                  </td>
+              </tr>
+              <tr>
+                <td class="text-right">
+                    <label for="capacity">Guests Limit</label>
+                </td>
+                <td class="text-left">
+                    <input type="text" id="capacity" required>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-right">
+                    <label for="Repeats">Repeats</label>
+                </td>
+                <td class="text-left">
+                    <select>
+                      <option value="norepeat">does not repeat</option>
+                      <option value="rdaily">repeats daily </option>
+                      <option value="rweekly">repeats weekly </option>
+                      <option value="rmonthly">repeats monthly</option>
+                  </select>
+              </td>
+          </tr>
+          <tr>
+            <td class="text-right">
+                <label for="logo">Upload Event Logo</label>
+            </td>
+            <td class="text-left">
+                <input type="file" id="Elogo">
+            </td>
+        </tr>
+        <tr>
+            <td class="text-right">
+                <label for="address">Street Address</label>
+            </td>
+            <td class="text-left">
+                <input type="text" id="address">
+            </td>
+        </tr><tr>
+        <td class="text-right">
+            <label for="address">Address Line 2</label>
+        </td>
+        <td class="text-left">
+            <input type="text" id="address2">
+        </td>
+    </tr>
+    <tr>
+        <td class="text-right">
+            <label for="city">City</label>
+        </td>
+        <td class="text-left">
+            <select>
+              <option value="Kitchener">Kitchener</option>
+              <option value="Waterloo">Waterloo</option>
+              <option value="Cambridge">Cambridge </option>
+              <option value="Guelph">Guelph</option>
+              <option value="Milton">Milton </option>
+              <option value="Brantford">Brantford</option>
+          </select>
+      </td>
+  </tr>
+  <tr>
+    <td class="text-right">
+        <label for="province">Province</label>
+    </td>
+    <td class="text-left">
+        <select id="province">
+            <option value="ab">AB</option>
+            <option value="bc">BC</option>
+            <option value="mb">MB</option>
+            <option value="nb">NB</option>
+            <option value="nl">NL</option>
+            <option value="ns">NS</option>
+            <option value="nt">NT</option>
+            <option value="nu">NU</option>
+            <option value="on" selected="selected">ON</option>
+            <option value="pe">PE</option>
+            <option value="qc">QC</option>
+            <option value="sk">SK</option>
+            <option value="yt">YT</option>
+        </select>
+    </td>
+</tr>
+<tr>
+    <td class="text-right">
+        <label for="PCode">Postal Code</label>
+    </td>
+    <td class="text-left">
+        <input type="text" id="PCode">
+    </td>
+</tr>
+<tr>
+    <td class="text-right">
+        <label for="ETime">* Description</label>
+    </td>
+    <td class="text-left">
+        <textarea name="comments" cols="25" rows="5">Enter Event's Description here...</textarea>
+    </td>
+</tr>
+
+<tr>
+    <td class="text-center" colspan="2">
+        <!-- Button trigger modal -->
+        <button type="submit" class="btn btn-warning" data-toggle="modal" data-target="#confirmDetails" id="submitProfile">
+            Submit
+        </button>
 
 
-                            </td>
-                        </tr>
-                    </table>
-                </form>
+    </td>
+</tr>
+</table>
+</form>
 
 
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="confirmDetails" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">Please verify your details</h4>
             </div>
+            <div class="modal-body">
+                <table>
+                    <tr>
+                        <td class="text-right">
+                            <label for="Etitle">Event Title</label>
+                        </td>
+                        <td>
+                           <div id="Etitle"></div>
+                       </td>
+                   </tr>
+                   <tr>
+                    <td class="text-right">
+                        <label for="Sdate">Start Date</label>
+                    </td>
+                    <td>
+                       <div id="Sdate"></div>
+                   </td>
+               </tr>
 
-      
-         <!-- Modal -->
-      <div class="modal fade" id="confirmDetails" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
-                        </button>
-                        <h4 class="modal-title" id="myModalLabel">Please verify your details</h4>
-                    </div>
-                    <div class="modal-body">
-                        <table>
-                            <tr>
-                                <td class="text-right">
-                                    <label for="Etitle">Event Title</label>
-                                </td>
-								<td>
-									<div id="Etitle"></div>
-								</td>
-                            </tr>
-                            <tr>
-                                <td class="text-right">
-                                    <label for="Sdate">Start Date</label>
-                                </td>
-								<td>
-									<div id="Sdate"></div>
-								</td>
-                            </tr>
-                            
-                            <tr>
-                                <td class="text-right">
-                                    <label for="Stime"> Start Time 	</label>
-                                </td>
-								<td>
-									<div id="Stime"></div>
-								</td>
-                            </tr><tr>
-                                <td class="text-right">
-                                    <label for="Edate">End Date</label>
-                                </td>
-								<td>
-									<div id="Edate"></div>
-								</td>
-                            </tr>
-                            
-                            <tr>
-                                <td class="text-right">
-                                    <label for="Etime"> End Time 	</label>
-                                </td>
-								<td>
-									<div id="Etime"></div>
-								</td>
-                            </tr>
-                            
-                            <tr>
-                                <td class="text-right">
-                                    <label for="capacity">Guest Limit</label>
-                                </td>
-								<td>
-									<div id="capacity"></div>
-								</td>
-                            </tr><tr>
-                                <td class="text-right">
-                                    <label for="Repeats">Repeats</label>
-                                </td>
-								<td>
-									<div id="Repeats"></div>
-								</td>
-                            </tr>
-                            <tr>
-                                <td class="text-right">
-                                    <label for="Elogo">Event Logo</label>
-                                </td>
-								<td>
-									<div id="Elogo"></div>
-								</td>
-                            </tr>
-                            <tr>
-                                <td class="text-right">
-                                    <label for="address">Street Address</label>
-                                </td>
-								<td>
-									<div id="address"></div>
-								</td>
-                            </tr>
-							<tr>
-                                <td class="text-right">
-                                    <label for="address2">Address Line 2</label>
-                                </td>
-								<td>
-									<div id="address2"></div>
-								</td>
-                            </tr>
-                            <tr>
-                                <td class="text-right">
-                                    <label for="city">City</label>
-                                </td>
-								<td>
-									<div id="city"></div>
-								</td>
-                            </tr>
-                            <tr>
-                                <td class="text-right">
-                                    <label for="province">Province</label>
-                                </td>
-								<td>
-									<div id="Province"></div>
-								</td>
-                            </tr>
-							<tr>
-                                <td class="text-right">
-                                    <label for="PCode">Postal Code</label>
-                                </td>
-								<td>
-									<div id="PCode"></div>
-								</td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        
-						<!-- Button trigger modal -->
-                                <button type="submit" class="btn btn-warning" data-toggle="modal" data-target="#worning" id="submitProfile">
-                                    Submit
-                                </button>
-                    </div>
-                </div>
+               <tr>
+                <td class="text-right">
+                    <label for="Stime"> Start Time 	</label>
+                </td>
+                <td>
+                   <div id="Stime"></div>
+               </td>
+           </tr><tr>
+           <td class="text-right">
+            <label for="Edate">End Date</label>
+        </td>
+        <td>
+           <div id="Edate"></div>
+       </td>
+   </tr>
+
+   <tr>
+    <td class="text-right">
+        <label for="Etime"> End Time 	</label>
+    </td>
+    <td>
+       <div id="Etime"></div>
+   </td>
+</tr>
+
+<tr>
+    <td class="text-right">
+        <label for="capacity">Guest Limit</label>
+    </td>
+    <td>
+       <div id="capacity"></div>
+   </td>
+</tr><tr>
+<td class="text-right">
+    <label for="Repeats">Repeats</label>
+</td>
+<td>
+   <div id="Repeats"></div>
+</td>
+</tr>
+<tr>
+    <td class="text-right">
+        <label for="Elogo">Event Logo</label>
+    </td>
+    <td>
+       <div id="Elogo"></div>
+   </td>
+</tr>
+<tr>
+    <td class="text-right">
+        <label for="address">Street Address</label>
+    </td>
+    <td>
+       <div id="address"></div>
+   </td>
+</tr>
+<tr>
+    <td class="text-right">
+        <label for="address2">Address Line 2</label>
+    </td>
+    <td>
+       <div id="address2"></div>
+   </td>
+</tr>
+<tr>
+    <td class="text-right">
+        <label for="city">City</label>
+    </td>
+    <td>
+       <div id="city"></div>
+   </td>
+</tr>
+<tr>
+    <td class="text-right">
+        <label for="province">Province</label>
+    </td>
+    <td>
+       <div id="Province"></div>
+   </td>
+</tr>
+<tr>
+    <td class="text-right">
+        <label for="PCode">Postal Code</label>
+    </td>
+    <td>
+       <div id="PCode"></div>
+   </td>
+</tr>
+</table>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+    <!-- Button trigger modal -->
+    <button type="submit" class="btn btn-warning" data-toggle="modal" data-target="#warning" id="submitProfile">
+        Submit
+    </button>
+</div>
+</div>
+</div>
+</div>
+<!--worning Modal -->
+<div class="modal fade" id="warning" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title"  id="myModalLabel"><font color="red">An event is scheduled for this date in this city:</font></h4>
             </div>
+            <div class="modal-body">
+                <table align="center">
+                    <tr>
+                        <td class="text-right">
+                            <label for="Etitle">Event Title</label>
+                        </td>
+                        <td>
+                           <div id="Etitle">Matching Event</div>
+                       </td>
+                   </tr>
+                   <tr>
+                    <td colspan="2" class="text-center">
+                        <p>Would you like to save your event anyway?</p>
+                    </td>
+                </tr>
+            </table>
+
         </div>
-		     <!--worning Modal -->
-      <div class="modal fade" id="worning" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
-                        </button>
-                        <h4 class="modal-title"  id="myModalLabel"><font color="red">There is this similar event</font></h4>
-                    </div>
-                    <div class="modal-body">
-                        <table>
-                            <tr>
-                                <td class="text-right">
-                                    <label for="Etitle">Event Title</label>
-                                </td>
-								<td>
-									<div id="Etitle"></div>
-								</td>
-                            </tr>
-                            <tr>
-                                <td class="text-right">
-                                    <label for="Sdate">Start Date</label>
-                                </td>
-								<td>
-									<div id="Sdate"></div>
-								</td>
-                            </tr>
-                            
-                            <tr>
-                                <td class="text-right">
-                                    <label for="Stime"> Start Time 	</label>
-                                </td>
-								<td>
-									<div id="Stime"></div>
-								</td>
-                            </tr><tr>
-                                <td class="text-right">
-                                    <label for="Edate">End Date</label>
-                                </td>
-								<td>
-									<div id="Edate"></div>
-								</td>
-                            </tr>
-                            
-                            <tr>
-                                <td class="text-right">
-                                    <label for="Etime"> End Time 	</label>
-                                </td>
-								<td>
-									<div id="Etime"></div>
-								</td>
-                            </tr>
-                            
-                            <tr>
-                                <td class="text-right">
-                                    <label for="capacity">Guest Limit</label>
-                                </td>
-								<td>
-									<div id="capacity"></div>
-								</td>
-                            </tr><tr>
-                                <td class="text-right">
-                                    <label for="Repeats">Repeats</label>
-                                </td>
-								<td>
-									<div id="Repeats"></div>
-								</td>
-                            </tr>
-                            <tr>
-                                <td class="text-right">
-                                    <label for="Elogo">Event Logo</label>
-                                </td>
-								<td>
-									<div id="Elogo"></div>
-								</td>
-                            </tr>
-                            <tr>
-                                <td class="text-right">
-                                    <label for="address">Street Address</label>
-                                </td>
-								<td>
-									<div id="address"></div>
-								</td>
-                            </tr>
-							<tr>
-                                <td class="text-right">
-                                    <label for="address2">Address Line 2</label>
-                                </td>
-								<td>
-									<div id="address2"></div>
-								</td>
-                            </tr>
-                            <tr>
-                                <td class="text-right">
-                                    <label for="city">City</label>
-                                </td>
-								<td>
-									<div id="city"></div>
-								</td>
-                            </tr>
-                            <tr>
-                                <td class="text-right">
-                                    <label for="province">Province</label>
-                                </td>
-								<td>
-									<div id="Province"></div>
-								</td>
-                            </tr>
-							<tr>
-                                <td class="text-right">
-                                    <label for="PCode">Postal Code</label>
-                                </td>
-								<td>
-									<div id="PCode"></div>
-								</td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        
-						<!-- Button trigger modal -->
-                                <button type="submit" class="btn btn-warning" data-toggle="modal" data-target="#worning" id="submitProfile">
-                                    Submit
-                                </button>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Edit Event Details</button>
 
+            <!-- Button trigger modal -->
+            <button type="submit" class="btn btn-warning" data-target="eventDetails.html" id="submitEvent">
+                Save event
+            </button>
+        </div>
     </div>
-    <!-- /.container -->
+</div>
+</div>
+
+</div>
+<!-- /.container -->
 
 
     <!-- Bootstrap core JavaScript
